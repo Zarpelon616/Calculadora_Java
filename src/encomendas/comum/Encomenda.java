@@ -14,12 +14,7 @@ public class Encomenda implements Serializable {
 
     private List<EventoRastreamento> historico;
 
-    public Encomenda(
-            String codigo,
-            String origem,
-            String destino,
-            String status) {
-
+    public Encomenda(String codigo, String origem, String destino, String status) {
         this.codigo = codigo;
         this.origem = origem;
         this.destino = destino;

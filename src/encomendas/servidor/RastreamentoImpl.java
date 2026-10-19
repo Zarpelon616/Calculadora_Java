@@ -59,11 +59,7 @@ public class RastreamentoImpl extends UnicastRemoteObject implements Rastreament
     }
 
     @Override
-    public boolean atualizarStatus(
-            String codigo,
-            String novoStatus,
-            String local)
-            throws RemoteException {
+    public boolean atualizarStatus(String codigo, String novoStatus, String local) throws RemoteException {
         registrarCliente("Atualização da encomenda " + codigo);
 
         Encomenda encomenda = encomendas.get(codigo);

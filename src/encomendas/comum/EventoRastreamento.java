@@ -10,11 +10,7 @@ public class EventoRastreamento implements Serializable {
     private String local;
     private String status;
 
-    public EventoRastreamento(
-            LocalDateTime dataHora,
-            String local,
-            String status) {
-
+    public EventoRastreamento(LocalDateTime dataHora, String local, String status) {
         this.dataHora = dataHora;
         this.local = local;
         this.status = status;
