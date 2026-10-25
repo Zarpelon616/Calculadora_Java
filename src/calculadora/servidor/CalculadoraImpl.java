@@ -24,4 +24,22 @@ public class CalculadoraImpl extends UnicastRemoteObject implements Calculadora 
 
         return a + b;
     }
+    @Override
+    public int subtrair(int a, int b) throws RemoteException {
+        return a - b;
+    }
+
+    @Override
+    public int multiplicar(int a, int b) throws RemoteException {
+        return a * b;
+    }
+
+    @Override
+    public double dividir(int a, int b) throws RemoteException {
+        if (b == 0) {
+            throw new ArithmeticException("Divisão por zero não permitida.");
+        }
+
+        return (double) a / b;
+    }
 }

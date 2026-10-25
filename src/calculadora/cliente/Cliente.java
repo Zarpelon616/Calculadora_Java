@@ -13,8 +13,10 @@ public class Cliente {
             Registry registry = LocateRegistry.getRegistry(ipServidor, 1099);
             Calculadora calc = (Calculadora) registry.lookup("ServicoCalculadora");
 
-            int resultado = calc.somar(15, 25);
-            System.out.println("Resultado obtido com sucesso: " + resultado);
+            System.out.println("Soma: " + calc.somar(15, 25));
+            System.out.println("Subtração: " + calc.subtrair(25, 10));
+            System.out.println("Multiplicação: " + calc.multiplicar(5, 6));
+            System.out.println("Divisão: " + calc.dividir(5, 2));
         } catch (Exception e) {
             System.err.println("Erro no calculadora.cliente: " + e.getMessage());
             e.printStackTrace();
